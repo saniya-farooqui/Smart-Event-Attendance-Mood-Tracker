@@ -1,0 +1,1 @@
+</main><footer><small>Prototype • Core PHP • QR via Google Chart API • Simple sentiment</small></footer></body></html>

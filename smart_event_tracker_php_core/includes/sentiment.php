@@ -1,0 +1,3 @@
+<?php
+function analyze_sentiment($text){ $positive=['good','great','excellent','awesome','nice','love','best','fantastic','happy']; $negative=['bad','poor','terrible','hate','worst','awful','sad','boring']; $t=strtolower($text); $score=0; foreach($positive as $p) if(strpos($t,$p)!==false) $score++; foreach($negative as $n) if(strpos($t,$n)!==false) $score--; $label='neutral'; if($score>0) $label='positive'; elseif($score<0) $label='negative'; return ['label'=>$label,'score'=>$score]; }
+?>

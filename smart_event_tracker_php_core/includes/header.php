@@ -1,0 +1,6 @@
+<?php 
+require_once __DIR__.'/auth.php'; 
+require_once __DIR__.'/config.php'; // Include config to get BASE_URL
+
+$user=current_user(); 
+?><!doctype html><html><head><meta charset='utf-8'><title>Smart Event Tracker</title><!-- Using BASE_URL for CSS file path --><link rel='stylesheet' href='<?= BASE_URL ?>/assets/css/style.css'></head><body><header><h1><!-- Using BASE_URL for home link --><a href='<?= BASE_URL ?>/'>Smart Event Attendance & Mood Tracker</a></h1><nav><?php if($user): ?>Hello, <?=htmlspecialchars($user['name'])?> (Points: <?= (int)$user['points'] ?>) | <!-- Using BASE_URL for Dashboard link --><a href='<?= BASE_URL ?>/dashboard.php'>Dashboard</a> | <a href='<?= BASE_URL ?>/leaderboard.php'>Leaderboard</a> | <a href='<?= BASE_URL ?>/logout.php'>Logout</a><?php else: ?> <a href='<?= BASE_URL ?>/login.php'>Login</a> | <a href='<?= BASE_URL ?>/register.php'>Register</a><?php endif; ?></nav></header><main><?php if(isset($_SESSION['flash'])){ echo '<div class=\"flash\">'.htmlspecialchars($_SESSION['flash']).'</div>'; unset($_SESSION['flash']); } ?>

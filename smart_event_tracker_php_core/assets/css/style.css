@@ -1,0 +1,46 @@
+.extras {
+  padding: 3rem;
+  text-align: center;
+  color: white;
+}
+
+.extras h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #00bfff;
+}
+
+.events {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.event-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 280px;
+  text-align: left;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+}
+
+.event-card h3 {
+  margin: 0;
+  color: #00bfff;
+  font-size: 1.3rem;
+}
+
+.event-card span {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}

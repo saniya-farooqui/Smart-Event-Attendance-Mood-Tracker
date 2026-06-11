@@ -1,0 +1,1 @@
+Smart Event Attendance & Mood Tracker (Core PHP + MySQL)\nSee database/smart_event.sql for schema. Default admin: admin@example.com / admin123\n
